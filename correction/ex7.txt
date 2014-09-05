@@ -1,0 +1,27 @@
+======= app.js =======
+
+var routing = require('./routing');
+var express = require('express');
+
+var app = express();
+
+routing.init(app);
+
+app.listen(8080);
+
+
+
+===== routing.js ========
+
+var init = function (app) {
+    app.get('/hello', function(req, res) {
+        res.writeHead(200, {"Content-Type": "text/html"});
+        res.end('<p>Voici un paragraphe <strong>HTML</strong> !</p>');
+    });
+    app.get('/*', function(req, res) {
+        res.end();
+    });
+}
+
+
+exports.init = init;
