@@ -1,0 +1,4 @@
+Faire un backend JS parceque :
+- back et front, même techno!
+- Rapidivité d'exécution grâce au moteur V8 JS
+- environnement de dev light!
