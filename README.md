@@ -1,7 +1,7 @@
 coding-dojo-nodejs
 =====================
 
-Compass tutorial.
+Node.js tutorial.
 
 ## Software dependencies (install)
 -	[Node.js](http://nodejs.org/)

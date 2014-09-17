@@ -2,13 +2,29 @@ Exercices coding dojo Node.js
 --------------------------
 
 - Ex 0 : Comprendre l'objectif
-- Ex 1 : Création d'un simple server HTTP qui affiche Hello World (http.createServer, server.listen, ...)
+- Ex 1 : Création d'un simple server HTTP "app.js" qui affiche Hello World
+	- `require`
+	- `http.createServer(function(req, res)`
+	- `server.listen(8080)`
 - Ex 2 : HTML...
-- Ex 3 : Obliger d'arrêter et redémarrer le server? Live reload nodemon (npm install -g nodemon)
+- Ex 3 : Obliger d'arrêter et redémarrer le server? Utiliser nodemon.
+	- `npm install -g nodemon`
 - Ex 4 : Routing (url). N'afficher la page que sur l'url "/hello"
-- Ex 5 : Faire des modules internes
-- Ex 6 : Utilisation des modules externes : npm init, et ajouter express (https://www.npmjs.org/) dans le package.json ("express": "^4.8.8") et npm install
+	- `require('url')`
+	- `page = url.parse(req.url).pathname`
+- Ex 5 : Faire un module interne pour gérer les routes "routing.js".
+	- `require('./routing')`
+	- `exports.init = init;`
+- Ex 6 : Utiliser le module externe "express". Framework web pour Node.js (template, routing...).
+	- `npm init`
+	- `npm install express --save-dev`
 - Ex 7 : Modifier le routing pour utiliser Express
-- Ex 8 : Templating (ajouter Ejs)
-- Ex 9 : Ajout d'un parametre à la requete et affichage de ce parametre : "Hello <Prenom>"
+	- `app.get('/hello', function(req, res) {`
+- Ex 8 : Et pour leTemplating ? Fichier "hello.ejs" dans "views".
+	- `npm install ejs --save-dev`
+	- `res.render('hello.ejs');`
+	- `<p>Hello <strong>toi</strong> !</p>`
+- Ex 9 : Ajout d'un paramètre à la requête et affichage de ce paramètre : "Hello <Prenom>"
+	- `{prenom: req.query.prenom}`
 - Ex 10 : Debug Node.js depuis WebStorm
+	- `Node interpreter : nodemon`
