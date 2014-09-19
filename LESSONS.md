@@ -20,11 +20,13 @@ Exercices coding dojo Node.js
 	- `npm install express --save-dev`
 - Ex 7 : Modifier le routing pour utiliser Express
 	- `app.get('/hello', function(req, res) {`
+	- `app = express()`
 - Ex 8 : Et pour leTemplating ? Fichier "hello.ejs" dans "views".
 	- `npm install ejs --save-dev`
 	- `res.render('hello.ejs');`
 	- `<p>Hello <strong>toi</strong> !</p>`
 - Ex 9 : Ajout d'un paramètre à la requête et affichage de ce paramètre : "Hello <Prenom>"
 	- `{prenom: req.query.prenom}`
+	- `<%prenom%>`
 - Ex 10 : Debug Node.js depuis WebStorm
 	- `Node interpreter : nodemon`
